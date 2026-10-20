@@ -1,5 +1,39 @@
 ##Configurations
 
+# HTTPS links: use with pandas, e.g. pd.read_csv(pagila_datasets_http["actor"])
+pagila_datasets_http = {
+
+    "actor": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/actor.csv",
+    "address": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/address.csv",
+    "category": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/category.csv",
+    "city": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/city.csv",
+    "country": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/country.csv",
+    "customer": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/customer.csv",
+    "film_actor": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/film_actor.csv",
+    "film_category": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/film_category.csv",
+    "film": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/film.csv",
+    "inventory": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/inventory.csv",
+    "language": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/language.csv",
+
+    "payments": {
+        "payment2022_01": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/payment_p2022_01.csv",
+        "payment2022_02": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/payment_p2022_02.csv",
+        "payment2022_03": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/payment_p2022_03.csv",
+        "payment2022_04": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/payment_p2022_04.csv",
+        "payment2022_05": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/payment_p2022_05.csv",
+        "payment2022_06": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/payment_p2022_06.csv",
+        "payment2022_07": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/payment_p2022_07.csv"
+    }
+}
+
+session_datasets_http = {
+    "Production.Product": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/Production.Product.csv",
+    "customer": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/customer.csv",
+    "payment": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/payment.csv",
+    "Salaries": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/Salaries.csv"
+}
+
+# S3 links: use with Spark, e.g. spark.read.csv(pagila_datasets["actor"], header=True)
 pagila_datasets = {
     
     "actor": "s3a://rockborne-bucket-01-cbs/Data_Sources_CBS_Risk/pagila_csv/actor.csv",
