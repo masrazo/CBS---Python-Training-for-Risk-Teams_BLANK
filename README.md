@@ -4,13 +4,13 @@ Welcome! This repository holds the notebooks for the course. Materials are added
 
 ## Course outline
 
-| Session | Topic | Status |
-|---|---|---|
-| 1 | Python Fundamentals | Available |
-| 2 | Data Extraction & Manipulation | Available |
-| 3 | Data Quality & Exploratory Analysis | Available |
-| 4 | Statistics for Risk Analysis | Coming soon |
-| 5 | Machine Learning for Model Developers | Coming soon |
+| Session | Topic | Student | Coach (lectures) |
+|---|---|---|---|
+| 1 | Python Fundamentals | Available | Available |
+| 2 | Data Extraction & Manipulation | Available | Available |
+| 3 | Data Quality & Exploratory Analysis | Available | Available |
+| 4 | Statistics for Risk Analysis | Coming soon | Coming soon |
+| 5 | Machine Learning for Model Developers | Coming soon | Coming soon |
 
 ## How the materials work
 
