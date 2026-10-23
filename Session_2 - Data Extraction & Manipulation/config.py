@@ -1,7 +1,7 @@
 ##Configurations
 
-# HTTPS links: use with pandas, e.g. pd.read_csv(pagila_datasets_http["actor"])
-pagila_datasets_http = {
+# HTTPS links (default): read with pandas, e.g. pd.read_csv(pagila_datasets["actor"])
+pagila_datasets = {
 
     "actor": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/actor.csv",
     "address": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/pagila_csv/address.csv",
@@ -26,15 +26,16 @@ pagila_datasets_http = {
     }
 }
 
-session_datasets_http = {
+# HTTPS links (default): read with pandas, e.g. pd.read_csv(session_datasets["Salaries"])
+session_datasets = {
     "Production.Product": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/Production.Product.csv",
     "customer": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/customer.csv",
     "payment": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/payment.csv",
     "Salaries": "https://rockborne-bucket-01-cbs.s3.eu-west-2.amazonaws.com/Data_Sources_CBS_Risk/Salaries.csv"
 }
 
-# S3 links: use with Spark, e.g. spark.read.csv(pagila_datasets["actor"], header=True)
-pagila_datasets = {
+# S3 links (Databricks/Spark only), e.g. spark.read.csv(pagila_datasets_s3["actor"], header=True)
+pagila_datasets_s3 = {
     
     "actor": "s3a://rockborne-bucket-01-cbs/Data_Sources_CBS_Risk/pagila_csv/actor.csv",
     "address": "s3a://rockborne-bucket-01-cbs/Data_Sources_CBS_Risk/pagila_csv/address.csv",
@@ -59,11 +60,14 @@ pagila_datasets = {
     }
 }
 
-session_datasets = {
+# S3 links (Databricks/Spark only), e.g. spark.read.csv(session_datasets_s3["Salaries"], header=True)
+session_datasets_s3 = {
     "Production.Product": "s3a://rockborne-bucket-01-cbs/Data_Sources_CBS_Risk/Production.Product.csv",
     "customer": "s3a://rockborne-bucket-01-cbs/Data_Sources_CBS_Risk/customer.csv",
     "payment": "s3a://rockborne-bucket-01-cbs/Data_Sources_CBS_Risk/payment.csv",
     "Salaries": "s3a://rockborne-bucket-01-cbs/Data_Sources_CBS_Risk/Salaries.csv"
 }
 
-            
+# Aliases kept for consistency with the Session 4 and 5 config files.
+pagila_datasets_http = pagila_datasets
+session_datasets_http = session_datasets
