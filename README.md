@@ -43,6 +43,19 @@ Then run `git pull` before each session to get the latest files.
 
 > **Tip:** Make a copy of a notebook before working in it (for example `01_07_Practical_..._MyAnswers.ipynb`). If you edit the original files, `git pull` may report conflicts when new versions are released.
 
+**Option 3: Open it directly in Databricks (Git folder)**
+
+1. In Databricks, click **Workspace** in the sidebar and open your user folder.
+2. Click **Create**, then **Git folder**.
+3. Paste the repository URL: `https://github.com/masrazo/CBS---Python-Training-for-Risk-Teams_BLANK.git`. The Git provider (GitHub) is detected automatically.
+4. Click **Create Git folder**. The sessions appear as folders and the notebooks open directly in Databricks.
+
+To get new materials before each session, open the Git folder, click the branch name (`main`) at the top, then click **Pull**.
+
+> **Tip:** To keep your work safe when you pull, right-click a notebook and choose **Clone**, keeping the copy in the **same folder** (so `from config import ...` still works) and giving it a new name such as `..._MyAnswers`. Work in your copy, not the original.
+>
+> If Databricks asks for Git credentials, ask your trainer; your workspace may require a linked GitHub account.
+
 ## Setup
 
 - Python 3.10 or later with Jupyter (Anaconda is the simplest option), or the course environment provided by your trainer.
@@ -53,6 +66,7 @@ Then run `git pull` before each session to get the latest files.
   ```
 
 - Open notebooks from inside their session folder so that imports such as `from config import session_datasets` work.
+- **On Databricks:** `pandas`, `numpy`, `matplotlib` and `seaborn` are already installed. The Sweetviz notebook installs `sweetviz` itself in its setup cell. All data is read with pandas, so no Spark setup is needed.
 
 ## Data
 
